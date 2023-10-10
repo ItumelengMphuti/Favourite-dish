@@ -7,14 +7,10 @@
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&family=Roboto:wght@100&family=Young+Serif&display=swap" rel="stylesheet">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display:ital,wght@1,900&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body>
+<body id="home">
     <header>
 		<div class="nav">
 			<input type="checkbox" id="nav-check">
@@ -31,18 +27,95 @@
 			  </label>
 			</div>
 			<div class="nav-links">
-				<a href="#">Home</a>
-				<a href="#">About</a>
-				<a href="#">Other Famous South African Dishes</a>
+				<a href="#home">Home</a>
+				<a href="#history">History</a>
+                <a href="#ingredients">...Served with</a>
+				<a href="#other">Other Famous South African Dishes</a>
 			</div>
 		  </div>
 	</header>
-    <main>
+    <main >
         <div class="braai">
-            <h1>A South African <br> Braai.</h1>
+            <h1>
+                <span class="south-african">A South African</span>
+                <br>
+                <span class="meat">Braai</span>
+            </h1>
             <img src="braai.png" alt="Braai meat.">
         </div>
+        <div class="content">
+            <section id="history">
+                <h2>History Of The South African Braai.</h2>
+                <p>
+                    The word ‘braai’ is a South African favourite term for our beloved tradition of cooking meat over an open flame, <br>and while there is no argument as to where the word came from, the when is another matter. <br>
+                    The word ‘braai’ originated from the Dutch word ‘braden’ meaning ‘roast’ and has since become the word for the social gathering, the grill, <br>and the action of cooking the meat. 
+                    It is a word which brings South Africans together across all languages and inspires pride as we gather.
+                </p>
+                <p>
+                    During apartheid, the braai became a symbol of unity and resistance. Non-white communities were often denied access to public parks and beaches, <br>
+                    leading them to create their own gathering spots for braais in their backyards and townships. The braai became a source of comfort, cultural preservation, 
+                    <br>and community building during this challenging period.
+                </p>
+                <p> 
+                    In 1995, South Africa underwent a historic transformation when Nelson Mandela was elected as the country's first black president. <br>To commemorate this event and celebrate
+                    the nation's diverse cultural heritage, National Heritage Day was established. <br>It was on this day that the 24th of September officially became known as "National Braai Day." <br>
+                    Today, National Braai Day is a celebration of South Africa's multiculturalism, bringing people from all walks of life together <br>to share a meal cooked over an open flame.
+                    It has also spread beyond South Africa's borders, with people around the world joining in the festivities.
+                </p>
+            </section>
+            <section id="ingredients">
+                <h2>What type of food is served at a braai?</h2>
+                <p>Obviosly, meat. Well ,arinated with spices and sauces.</p>
+                <p>But, what kind of meat?
+                    <ul>
+                        <li>Boerwors</li>
+                        <li>Steak</li>
+                        <li>Lamb chops</li>
+                        <li>Chicken</li>
+                        <li>Sea food e.g Hake</li>
+                        <li>Kebabs</li>
+                    </ul>
+                </p>
+                <h1>Besides meat, what else can be served at a braai?</h1>
+                    <ul>
+                        <li>Pap</li>
+                        <li>Chips and dip</li>
+                        <li>Biltong</li>
+                        <li>Salads</li>
+                        <li>Alcohol.</li>
+                    </ul>
+            </section>
+            <section id="other">
+                <h2>Other Famous South African Dishes</h2>
+                <!-- Your about content goes here -->
+            </section>
+        </div>
+
+        
+
     </main>
+    <a href="index.html" id="scroll-to-top"><i class="material-symbols-outlined"></i></a>
+
+    <footer>
+        <p>&copy; 2023 South African Braai</p>
+    </footer>
+    <script>
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            var scrollToTopButton = document.getElementById("scroll-to-top");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        }
+
+        document.getElementById("scroll-to-top").addEventListener("click", function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        });
+    </script>
 </body>
 </html>
 
