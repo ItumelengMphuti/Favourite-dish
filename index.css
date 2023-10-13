@@ -88,7 +88,6 @@ header {
 	  border-top: 2px solid #eee;
 	}
 	.nav > .nav-links {
-	  /* position: relative; */
 	  display: block;
 	  width: 100%;
 	  background-color: rgba(20, 20, 20, 0.233);
@@ -100,8 +99,8 @@ header {
 	}
 	.nav > .nav-links > a {
 		display: block;
-		/* width: 100%; */
-		text-decoration: none; /* removes underline decoration */
+		
+		text-decoration: none;
 	  }
 	  
 	.nav > #nav-check:not(:checked) ~ .nav-links {
@@ -112,7 +111,6 @@ header {
 	  overflow-y: auto;
 	}
     .nav > .nav-links > a:hover {
-        /* background-color: rgb(219, 216, 216); */
         color: rgb(255, 255, 255);
       }
       
@@ -126,7 +124,14 @@ main {
     margin-top: 150px; 
     padding-left: 20px;
     padding-right: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 150px;
 }
+
 .braai {
     display: flex; 
     align-items: flex-end;
@@ -136,7 +141,7 @@ main {
 .braai h1{ 
     font-family: 'Playfair Display', serif;
 	font-size: xx-large;
-    margin-right: 20px; /* Add spacing between h1 and img */
+    margin-right: 20px;
     margin-bottom: 150px; 
 }
 .south-african {
@@ -157,13 +162,55 @@ main {
 	font-size: larger;
 	font-weight: bold;
 }
+.content p {
+  margin: 0; 
+}
+.flex-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
 
+.text {
+    flex: 1;
+    padding: 10px;
+	
+}
+
+.image {
+    margin-right: 100px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+figcaption {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+  
 
 .content p {
-    margin-bottom: 20px; /* Add space below each paragraph */
-    line-height: 1.5; /* Adjust the line height for better readability */
+    margin-bottom: 20px; 
+    line-height: 1.5; 
 	font-family: 'Merriweather', serif;
 }
+.wors {
+  margin-bottom: 15px;
+}
+.wors img{
+  height: 10%;
+  width: 50%;
+  padding-left: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.steak img{}
+.chops img{}
+.seafood img{}
+.kebabs img{}
+
 
 #scroll-to-top {
     display: none;
@@ -187,7 +234,7 @@ main {
   'wght' 400,
   'GRAD' 0,
   'opsz' 24
-}
+} 
 
 footer {
     background-color: #333;
