@@ -4,11 +4,287 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>South African Braai.</title>
-    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display:ital,wght@1,900&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&family=Playfair+Display:ital,wght@1,900&family=Roboto:wght@100&display=swap" rel="stylesheet">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&family=Playfair+Display:ital,wght@1,900&family=Roboto:wght@100&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	margin: 10px;
+	width: 100%;
+	overflow-x: hidden;
+}
+header {
+    background-color: rgba(20, 20, 20, 0.233);
+    width: 100%;
+	position: absolute;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+
+.nav > .nav-header {
+	display: inline;
+  }
+  .nav > .nav-btn {
+	display: none;
+  }
+  
+  .nav > .nav-links {
+	display: inline;
+	float: center;
+	font-size: 20px;
+	
+    padding-left: 90px;
+  }
+  
+  .nav > .nav-links > a {
+	display: inline-block;
+	padding: 50px 15px 13px 50px;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	margin-inline: 30px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .nav > .nav-links > a:hover {
+	color: rgb(2, 2, 2);
+  }
+  
+  .nav > #nav-check {
+	display: none;
+  }
+  
+  @media (max-width:800px) {
+	.nav > .nav-btn {
+	  display: inline-block;
+	  position: absolute;
+	  right: 5px;
+	  top: 15px;
+	}
+	.nav > .nav-btn > label {
+	  display: inline-block;
+	  width: 50px;
+	  height: 50px;
+	  padding: 13px;
+	}
+	.nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+	  background-color: rgba(20, 20, 20, 0.233);
+	}
+	.nav > .nav-btn > label > span {
+	  display: block;
+	  width: 25px;
+	  height: 10px;
+	  border-top: 2px solid #eee;
+	}
+	.nav > .nav-links {
+	  display: block;
+	  width: 100%;
+	  background-color: rgba(20, 20, 20, 0.233);
+	  height: 0px;
+	  transition: all 0.3s ease-in;
+	  overflow-y: hidden;
+	  top: 50px;
+	  left: 0px;
+	}
+	.nav > .nav-links > a {
+		display: block;
+		
+		text-decoration: none;
+	  }
+	  
+	.nav > #nav-check:not(:checked) ~ .nav-links {
+	  height: 0px;
+	}
+	.nav> #nav-check:checked ~ .nav-links {
+	  height: calc(100vh - 50px);
+	  overflow-y: auto;
+	}
+    .nav > .nav-links > a:hover {
+        color: rgb(255, 255, 255);
+      }
+      
+  }
+.logo img {
+    height: 130px;
+    float: left;
+    padding-left: 60px;
+}
+main {
+    margin-top: 150px; 
+    padding-left: 20px;
+    padding-right: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 150px;
+}
+
+.braai {
+    display: flex; 
+    align-items: flex-end;
+    margin-left: 100px;
+}
+
+.braai h1{ 
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 100px; 
+}
+.south-african {
+    color: rgb(5, 5, 5);
+}
+
+.meat {
+  color: rgb(250, 172, 5); 
+}
+.braai img{
+  height: 250px;
+  max-width: 100%;
+  margin-left: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+}
+.content h2 {
+	font-family: 'Merriweather', serif;
+	font-size: larger;
+	font-weight: bolder;
+}
+.content p {
+  margin: 0; 
+}
+.flex-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+
+.text {
+    flex: 1;
+    padding: 10px;
+	
+}
+
+.image {
+    margin-right: 100px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+figcaption {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+  
+.content p {
+    margin-bottom: 20px; 
+    line-height: 1.5; 
+	 font-family: 'Merriweather', serif;
+}
+.wors {
+  margin-bottom: 15px;
+
+}
+.wors img{
+  height: 10%;
+  width: fit-content;
+  width: 50%;
+  padding-left: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.steak img{
+  height: 10%;
+  width: fit-content;
+  width: 50%;
+  padding-left: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3)
+}
+.steak {
+  margin-bottom: 15px;
+
+}
+.chops img{
+  height: 10%;
+  width: fit-content;
+  width: 50%;
+  padding-left: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3)
+}
+.chops{
+  margin-bottom: 15px;
+
+}
+.seafood img{
+  height: 10%;
+  width: fit-content;
+  width: 50%;
+  padding-left: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3)
+}
+.seafood {
+  margin-bottom: 15px;
+
+}
+.alcohol img{
+  height: 10%;
+  width: fit-content;
+  width: 50%;
+  padding-left: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3)
+}
+.alcohol {
+  margin-bottom: 15px;
+
+}
+h3 {
+  font-family: 'Merriweather', serif;
+}
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0707075b;
+  color: #fff;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.scroll-to-top:hover {
+  background-color: #26272717;
+}
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(20, 20, 20, 0.233);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+}
+</style>
+
 </head>
 <body id="home">
     <header>
@@ -27,19 +303,17 @@
 			  </label>
 			</div>
 			<div class="nav-links">
-				<a href="#home">Home</a>
+				<a href="index.html">Home</a>
 				<a href="#history">History</a>
                 <a href="#ingredients">...Served with</a>
-				<a href="#other">Other Famous South African Dishes</a>
+				<!-- <a href="#other">Other Famous South African Dishes</a> -->
 			</div>
 		  </div>
 	</header>
-
     <main >
         <div class="braai">
             <h1>
                 <span class="south-african">A South African</span>
-                <br>
                 <span class="meat">Braai</span>
             </h1>
             <img src="braai.png" alt="Braai meat.">
@@ -82,7 +356,6 @@
                         </figcaption>
                    </figure>
               </div>
-            
             <div class="wors">
                 <h3>Boerewors.</h3>
                 <p>Boerewors is a type of sausage which originated in South Africa.
@@ -105,58 +378,77 @@
             </div>
             <div class="chops">
                 <h3>Lamb Chops.</h3>
+                <p>
+                    The lamb loin chop is that animal’s royal and most expensive cut of braai meat. <br>
+                     It is exactly like a T-bone steak, but just from a lamb rather than a cow.
+                </p>
+                <p>
+                    With lamb chops, you need to keep the flavours simple so as to complement and<br> not overpower the natural flavours 
+                    of the meat. Season the chops and skewers with salt, pepper and coriander. 
+                    Chop or crush the garlic, chop the corianderleaves and add to the<br>  chops and skewers. 
+                    Drizzle with lemon juice and let the meat marinatefor as long as it takes<br>  your fire to burn out and form coals.
+                    Braai the chops and skewers over hot coals for 8 to<br> 12 minutes until they reachthat point between medium rare and 
+                    medium where lamb tastes best.
+                </p>
                 <img src="lambchops.jpg" alt="An image of Lamb Chops">
             </div>
             <div class="seafood">
                 <h3>Sea Food.</h3>
-                <img src="Seafood.jpg" alt="An image of Sea Food">
-            </div>
-            <div class="kebabs">
-                <h3>Kebabs.</h3>
-                <img src="kebabs.jpg" alt="An image of Kebabs">
-            </div>
-            
-            
-                <h1>Besides meat, what else can be served at a braai?</h1>
-                    <ul>
-                        <li>Pap</li>
-                        <li>Chips and dip</li>
-                        <li>Biltong</li>
-                        <li>Salads</li>
-                        <li>Alcohol.</li>
-                    </ul>
-            </section>
-            <section id="other">
-                <h2>Other Famous South African Dishes</h2>
-                <!-- Your about content goes here -->
+                <p>
+                    The most popular seafood served are praws and hake fish. <br>
+                    You can braai a whole fish ‘open’ or ‘closed’ and the choice is really a matter of personal preference.
+                    </p>
+                    <p>
+                    An ‘open’ fish has two sides, a flesh side and a skin side. Rub or paint the oil onto both sides and <br> 
+                    then grind salt and pepper onto the flesh side only.Place it on medium-to-hot coals, <br>flesh side down,
+                     for about 3–4 minutes until the flesh gets a light golden colour. <br>The fish is ready when it has turned white, 
+                     comes away from the bones when you try <br>to loosen it or flakes when you insert a fork into it.
+                </p>
+                <p>
+                    Braaied prawns are very popular. The fire makes the shells nice and crisp while giving<br> the meat a caramelised and smoky favour.
+                    When braaing prawns it’s not important<br> that they be shelled but they do have to be deveined.
+                    The shells give flavour and keep them from drying out. 
+                    Drizzle the prawns with the marinade and toss, ensuring all the prawns are coated with sauce. Chucking the prawns and marinade 
+                    into a plastic bagand sealing it<br>  is also an easy way to do it. Let them marinate for 30 minutes to 1 hour.<br>
+                    To give the prawns direct exposure to the coals, braai them in a pan with holes in <br>the bottom, a braai basket or on skewers.
+                    The prawns are ready after about 6 minutes<br> on medium to hot coals;
+                    you will see they are done when the shells change colour<br> from white to pink and the flesh from glassy to opaque.  
+                </p>
+                <img src="prawns.png" alt="An image of Sea Food">
+            </div> 
+            <!-- <div class="alcohol">
+                <h3>And, of course, alcohol.</h3>
+                <img src="alcohol.jpg" alt="">
+            </div> -->
             </section>
         </div>
-
-        
-
     </main>
-    <a href="index.html" id="scroll-to-top"><i class="material-symbols-outlined"></i></a>
-
+    <a href="#" id="scroll-to-top" class="scroll-to-top">&#8593;</a>
     <footer>
         <p>&copy; 2023 South African Braai</p>
     </footer>
     <script>
-        window.onscroll = function() { scrollFunction() };
-
-        function scrollFunction() {
-            var scrollToTopButton = document.getElementById("scroll-to-top");
+    document.addEventListener("DOMContentLoaded", function () {
+    
+        var scrollToTopButton = document.getElementById("scroll-to-top");
+    
+        window.addEventListener("scroll", function () {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 scrollToTopButton.style.display = "block";
             } else {
                 scrollToTopButton.style.display = "none";
             }
-        }
-
-        document.getElementById("scroll-to-top").addEventListener("click", function() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
         });
+
+        scrollToTopButton.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    });
     </script>
+    
 </body>
 </html>
 
