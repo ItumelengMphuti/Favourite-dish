@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&family=Playfair+Display:ital,wght@1,900&family=Roboto:wght@100&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	margin: 10px;
+	width: 100%;
+	overflow-x: hidden;
+}
+header {
+    background-color: rgba(20, 20, 20, 0.233);
+    width: 100%;
+	position: absolute;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+
+.nav > .nav-header {
+	display: inline;
+  }
+  .nav > .nav-btn {
+	display: none;
+  }
+  
+  .nav > .nav-links {
+	display: inline;
+	float: center;
+	font-size: 20px;
+	
+    padding-left: 90px;
+  }
+  
+  .nav > .nav-links > a {
+	display: inline-block;
+	padding: 50px 15px 13px 50px;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	margin-inline: 30px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .nav > .nav-links > a:hover {
+	color: rgb(2, 2, 2);
+  }
+  
+  .nav > #nav-check {
+	display: none;
+  }
+  
+  @media (max-width:800px) {
+	.nav > .nav-btn {
+	  display: inline-block;
+	  position: absolute;
+	  right: 5px;
+	  top: 15px;
+	}
+	.nav > .nav-btn > label {
+	  display: inline-block;
+	  width: 50px;
+	  height: 50px;
+	  padding: 13px;
+	}
+	.nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+	  background-color: rgba(20, 20, 20, 0.233);
+	}
+	.nav > .nav-btn > label > span {
+	  display: block;
+	  width: 25px;
+	  height: 10px;
+	  border-top: 2px solid #eee;
+	}
+	.nav > .nav-links {
+	  display: block;
+	  width: 100%;
+	  background-color: rgba(20, 20, 20, 0.233);
+	  height: 0px;
+	  transition: all 0.3s ease-in;
+	  overflow-y: hidden;
+	  top: 50px;
+	  left: 0px;
+	}
+	.nav > .nav-links > a {
+		display: block;
+		
+		text-decoration: none;
+	  }
+	  
+	.nav > #nav-check:not(:checked) ~ .nav-links {
+	  height: 0px;
+	}
+	.nav> #nav-check:checked ~ .nav-links {
+	  height: calc(100vh - 50px);
+	  overflow-y: auto;
+	}
+    .nav > .nav-links > a:hover {
+        color: rgb(255, 255, 255);
+      }
+      
+  }
+.logo img {
+    height: 130px;
+    float: left;
+    padding-left: 60px;
+}
+main {
+    margin-top: 150px; 
+    padding-left: 20px;
+    padding-right: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 150px;
+}
+
+.braai {
+    display: flex; 
+    align-items: flex-end;
+    margin-left: 100px;
+}
+
+.braai h1{ 
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 100px; 
+}
+.south-african {
+    color: rgb(5, 5, 5);
+}
+
+.meat {
+  color: rgb(250, 172, 5); 
+}
+.braai img{
+  height: 250px;
+  max-width: 100%;
+  margin-left: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+}
+.content h2 {
+	font-family: 'Merriweather', serif;
+	font-size: larger;
+	font-weight: bolder;
+}
+.content p {
+  margin: 0; 
+}
+.flex-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+
+.text {
+    flex: 1;
+    padding: 10px;
+	
+}
+
+.image {
+    margin-right: 100px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+figcaption {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+  
+.content p {
+    margin-bottom: 20px; 
+    line-height: 1.5; 
+	 font-family: 'Merriweather', serif;
+}
+.wors {
+  margin-bottom: 15px;
+
+}
+.wors img{
+  height: 10%;
+  width: fit-content;
+  width: 50%;
+  padding-left: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.steak img{
+  height: 10%;
+  width: fit-content;
+  width: 50%;
+  padding-left: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3)
+}
+.steak {
+  margin-bottom: 15px;
+
+}
+.chops img{
+  height: 10%;
+  width: fit-content;
+  width: 50%;
+  padding-left: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3)
+}
+.chops{
+  margin-bottom: 15px;
+
+}
+.seafood img{
+  height: 10%;
+  width: fit-content;
+  width: 50%;
+  padding-left: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3)
+}
+.seafood {
+  margin-bottom: 15px;
+
+}
+.alcohol img{
+  height: 10%;
+  width: fit-content;
+  width: 50%;
+  padding-left: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3)
+}
+.alcohol {
+  margin-bottom: 15px;
+
+}
+h3 {
+  font-family: 'Merriweather', serif;
+}
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0707075b;
+  color: #fff;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.scroll-to-top:hover {
+  background-color: #26272717;
+}
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(20, 20, 20, 0.233);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+}
